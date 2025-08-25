@@ -1,0 +1,200 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqyh3u4pu8vj3"]
+
+[ext_resource type="Script" uid="uid://de5ydewbjchlv" path="res://menu.gd" id="1_b23qx"]
+[ext_resource type="Script" uid="uid://ulap6dbvssu4" path="res://multiPlayer.gd" id="2_eas8t"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00341, 1)
+script = ExtResource("1_b23qx")
+
+[node name="PlayMenu" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 175.0
+offset_right = 361.0
+offset_bottom = 241.0
+
+[node name="Host" type="Button" parent="PlayMenu"]
+layout_mode = 0
+offset_left = 58.75
+offset_top = 45.0
+offset_right = 120.75
+offset_bottom = 83.0
+text = "Host"
+
+[node name="Join" type="Button" parent="PlayMenu"]
+layout_mode = 0
+offset_left = 58.75
+offset_top = 135.0
+offset_right = 120.75
+offset_bottom = 173.0
+text = "Join"
+
+[node name="LineEdit" type="LineEdit" parent="PlayMenu"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 90.0
+offset_right = 155.0
+offset_bottom = 128.0
+
+[node name="Back" type="Button" parent="PlayMenu"]
+layout_mode = 0
+offset_left = 58.75
+offset_top = 180.0
+offset_right = 120.75
+offset_bottom = 218.0
+text = "Back"
+
+[node name="LobbyMenu" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 408.607
+offset_top = 33.0
+offset_right = 908.607
+offset_bottom = 233.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LobbyMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerDisplayer" type="Panel" parent="LobbyMenu/HBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LobbyMenu/HBoxContainer/PlayerDisplayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LobbyMenu/HBoxContainer/PlayerDisplayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerContainer1" type="PanelContainer" parent="LobbyMenu/HBoxContainer/PlayerDisplayer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerContainer2" type="PanelContainer" parent="LobbyMenu/HBoxContainer/PlayerDisplayer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerContainer3" type="PanelContainer" parent="LobbyMenu/HBoxContainer/PlayerDisplayer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerContainer4" type="PanelContainer" parent="LobbyMenu/HBoxContainer/PlayerDisplayer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="LobbyMenu/HBoxContainer/PlayerDisplayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerContainer5" type="PanelContainer" parent="LobbyMenu/HBoxContainer/PlayerDisplayer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerContainer6" type="PanelContainer" parent="LobbyMenu/HBoxContainer/PlayerDisplayer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerContainer7" type="PanelContainer" parent="LobbyMenu/HBoxContainer/PlayerDisplayer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerContainer8" type="PanelContainer" parent="LobbyMenu/HBoxContainer/PlayerDisplayer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel2" type="Panel" parent="LobbyMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Play_Ready" type="Button" parent="LobbyMenu/HBoxContainer/Panel2"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 121.0
+offset_bottom = 33.0
+text = " "
+
+[node name="Disband_Leave" type="Button" parent="LobbyMenu/HBoxContainer/Panel2"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 41.0
+offset_right = 121.0
+offset_bottom = 72.0
+
+[node name="YaQui" type="Button" parent="LobbyMenu/HBoxContainer/Panel2"]
+offset_left = 4.74223
+offset_top = 77.0
+offset_right = 120.742
+offset_bottom = 108.0
+
+[node name="PlayerList" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Player" type="Node" parent="PlayerList"]
+script = ExtResource("2_eas8t")
+
+[node name="MainMenu" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Play" type="Button" parent="MainMenu"]
+offset_left = 45.0
+offset_top = 45.0
+offset_right = 107.0
+offset_bottom = 83.0
+text = "Play"
+
+[node name="Settings" type="Button" parent="MainMenu"]
+offset_left = 31.0
+offset_top = 90.0
+offset_right = 121.0
+offset_bottom = 128.0
+text = "Settings"
+
+[node name="Quit" type="Button" parent="MainMenu"]
+offset_left = 45.0
+offset_top = 135.0
+offset_right = 107.0
+offset_bottom = 173.0
+text = "Quit
+"
+
+[connection signal="pressed" from="PlayMenu/Host" to="." method="_on_button_host_pressed"]
+[connection signal="pressed" from="PlayMenu/Join" to="." method="_on_button_join_pressed"]
+[connection signal="pressed" from="PlayMenu/Back" to="." method="_on_button_back_pressed"]
+[connection signal="pressed" from="LobbyMenu/HBoxContainer/Panel2/Play_Ready" to="." method="_on_play_ready_pressed"]
+[connection signal="pressed" from="LobbyMenu/HBoxContainer/Panel2/Disband_Leave" to="." method="_on_disband_leave_pressed"]
+[connection signal="pressed" from="LobbyMenu/HBoxContainer/Panel2/YaQui" to="." method="_on_ya_qui_pressed"]
+[connection signal="pressed" from="MainMenu/Play" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="MainMenu/Settings" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="MainMenu/Quit" to="." method="_on_button_quit_pressed"]

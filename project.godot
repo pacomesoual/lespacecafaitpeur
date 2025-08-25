@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="l espace ça fait peur"
+run/main_scene="uid://cqyh3u4pu8vj3"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
