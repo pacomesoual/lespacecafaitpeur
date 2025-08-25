@@ -1,7 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqyh3u4pu8vj3"]
 
-[ext_resource type="Script" uid="uid://de5ydewbjchlv" path="res://menu.gd" id="1_b23qx"]
-[ext_resource type="Script" uid="uid://ulap6dbvssu4" path="res://multiPlayer.gd" id="2_eas8t"]
+[ext_resource type="Script" uid="uid://de5ydewbjchlv" path="res://Scripts/menu.gd" id="1_b23qx"]
+
+[sub_resource type="GDScript" id="GDScript_1rerr"]
+script/source = "extends Node
+
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -148,6 +154,7 @@ offset_right = 121.0
 offset_bottom = 72.0
 
 [node name="YaQui" type="Button" parent="LobbyMenu/HBoxContainer/Panel2"]
+layout_mode = 0
 offset_left = 4.74223
 offset_top = 77.0
 offset_right = 120.742
@@ -159,7 +166,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Player" type="Node" parent="PlayerList"]
-script = ExtResource("2_eas8t")
+script = SubResource("GDScript_1rerr")
 
 [node name="MainMenu" type="Control" parent="."]
 unique_name_in_owner = true
@@ -168,6 +175,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Play" type="Button" parent="MainMenu"]
+layout_mode = 0
 offset_left = 45.0
 offset_top = 45.0
 offset_right = 107.0
@@ -175,6 +183,7 @@ offset_bottom = 83.0
 text = "Play"
 
 [node name="Settings" type="Button" parent="MainMenu"]
+layout_mode = 0
 offset_left = 31.0
 offset_top = 90.0
 offset_right = 121.0
@@ -182,6 +191,7 @@ offset_bottom = 128.0
 text = "Settings"
 
 [node name="Quit" type="Button" parent="MainMenu"]
+layout_mode = 0
 offset_left = 45.0
 offset_top = 135.0
 offset_right = 107.0

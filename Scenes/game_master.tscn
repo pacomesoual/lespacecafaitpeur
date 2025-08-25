@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://had1w0jdm3ws"]
+[gd_scene load_steps=4 format=3 uid="uid://had1w0jdm3ws"]
 
-[ext_resource type="Script" uid="uid://c6jldpcg7cqil" path="res://game_master.gd" id="1_ldihj"]
+[ext_resource type="Script" uid="uid://c6jldpcg7cqil" path="res://Scripts/game_master.gd" id="1_ldihj"]
+[ext_resource type="Script" uid="uid://q75wxjivhkmh" path="res://Scenes/scene_master.gd" id="2_djvcl"]
+[ext_resource type="Script" uid="uid://cp2ludhjmd1h4" path="res://Scenes/multiplayer_master.gd" id="3_i3d8u"]
 
 [node name="GameMaster" type="Node"]
 script = ExtResource("1_ldihj")
+
+[node name="SceneMaster" type="Node" parent="."]
+script = ExtResource("2_djvcl")
+
+[node name="MultiplayerMaster" type="Node" parent="."]
+script = ExtResource("3_i3d8u")
