@@ -60,7 +60,7 @@ func Host():
 	clientOrHost = "Host"          #tente déséspérément d'identifier si on est le sacrifice ou le cultiste
 	print(clientOrHost + " "+ ": Waiting for players!")      #appel a l'aide
 
-
+ 
 func Join(address):
 	print("trying to join " + str(address))    #appel  a l'aide
 	peer = ENetMultiplayerPeer.new()             #magie noire
